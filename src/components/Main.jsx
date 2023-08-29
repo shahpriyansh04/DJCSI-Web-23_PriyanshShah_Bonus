@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 function Main() {
   return (
     <div className="mt-24 w-2/3  items-center justify-start">
@@ -10,9 +11,13 @@ function Main() {
       </p>
 
       <div className="mt-10 flex space-x-8">
-        <button className="bg-[#522FB9] py-4 px-8 rounded-full font-bold">
+        <motion.button
+          className="bg-[#522FB9] py-4 px-8 rounded-full font-bold"
+          whileHover={{ opacity: 0.8 }}
+          whileTap={{ scale: 0.95 }}
+        >
           DOWNLOAD APP
-        </button>
+        </motion.button>
         <button className="bg-[#272453] py-4 px-8 rounded-full font-semibold">
           VIEW PRICING
         </button>

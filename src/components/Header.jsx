@@ -1,4 +1,5 @@
 import logo from "/logo.jpg";
+import { motion } from "framer-motion";
 function Header() {
   return (
     <div className="text-white py-12 flex justify-between items-center">
@@ -19,9 +20,13 @@ function Header() {
       </div>
       <div className="flex space-x-8 items-center flex-1 justify-end ">
         <p className="text-gray-200">Cart (0)</p>
-        <button className="py-4 px-6 font-bold bg-[#522FB9] rounded-full">
+        <motion.button
+          className="py-4 px-6 font-bold bg-[#522FB9] rounded-full"
+          whileHover={{ opacity: 0.8 }}
+          whileTap={{ scale: 0.95 }}
+        >
           DOWNLOAD APP
-        </button>
+        </motion.button>
       </div>
       <div></div>
     </div>

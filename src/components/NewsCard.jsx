@@ -1,4 +1,4 @@
-function NewsCard({ thumbnail, category, title, image, author }) {
+function NewsCard({ thumbnail, category, title, image, author, details }) {
   return (
     <div className="bg-[#282454] rounded-3xl flex flex-col">
       <img src={thumbnail} alt="Post thumbnail" className="rounded-t-3xl" />
@@ -6,12 +6,19 @@ function NewsCard({ thumbnail, category, title, image, author }) {
         <div className="py-2 px-3 bg-[#6639E4] rounded-full text-xs absolute -top-4 left-5">
           {category}
         </div>
-        <div className="">
-          <p className="font-bold text-xl">{title}</p>
-          <p className="mt-4 text-gray-300">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed varius
-            dapibus dui eget mattis. Nulla eu leo nec justo vulputate tincidunt.
+        <div>
+          <p className="font-bold text-3xl text-center">{details?.code}</p>
+          <p className="mt-2 text-gray-300 text-center">
+            {details?.description}
           </p>
+          <div className="flex w-full text-2xl mt-2 justify-center">
+            <p>1&#8383; = </p>
+            <p className="ml-2 font-bold font-sans"> {details?.rate}</p>
+            <p
+              className="font-semibold"
+              dangerouslySetInnerHTML={{ __html: details?.symbol }}
+            ></p>
+          </div>
         </div>
         <hr />
         <div className=" flex space-x-4 items-center">

@@ -1,10 +1,16 @@
 import Privacy from "/privacy.svg";
 import Uptime from "/99.svg";
 import Chat from "/chat.svg";
+import { motion } from "framer-motion";
 function Features() {
   return (
-    <div className="mt-52 w-screen p-0 relative flex-col ">
-      <div className="w-1/3">
+    <div className="mt-56 w-screen p-0 relative flex-col ">
+      <motion.div
+        className="w-1/3"
+        initial={{ x: -100 }}
+        whileInView={{ x: 0 }}
+        transition={{ delay: 0.1 }}
+      >
         <p className="text-5xl font-bold">
           Build on a robust and powerful platform
         </p>
@@ -33,9 +39,12 @@ function Features() {
             <p className="text-lg">24/7 Dedicated support</p>
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      <img
+      <motion.img
+        initial={{ x: 100 }}
+        whileInView={{ x: 0, scale: 1.5 }}
+        transition={{ delay: 0.1 }}
         src="/pc.jpg"
         alt="PC"
         className="absolute right-32 top-0 h-5/6 scale-150"
