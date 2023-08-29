@@ -1,11 +1,11 @@
-import logo from "/logo.jpg";
+import logo from "/pc.jpg";
 import { motion } from "framer-motion";
 function Header() {
   return (
     <div className="text-white py-12 flex justify-between items-center">
       <div className="flex items-center space-x-12  ">
-        <div>
-          {/* <img src="/pc.jpg" /> */}
+        <div className="flex items-center space-x-3">
+          <img src={logo} className="h-8 rounded-full" />
           <p className="font-bold text-xl">Crypto</p>
         </div>
         <span className="h-20 bg-gray-700 w-px"></span>
